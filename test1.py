@@ -21,7 +21,7 @@ class func():
 
 
 print(hex(10))
-
+print("hello world")
 """
 print(ord("a"))
 print(chr(ord('a')))
