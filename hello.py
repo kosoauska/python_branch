@@ -1,5 +1,7 @@
 import sys
 import math
+from random import *
+
 class func():
     version = 1.0
     def prin(self , input = True):
@@ -22,6 +24,7 @@ class func():
 
 print(hex(10))
 print("hello world")
+print(randint(1 , 20))
 
 """
 print(ord("a"))
