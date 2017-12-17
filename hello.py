@@ -1,6 +1,7 @@
 import sys
 import math
 from random import *
+import string
 
 class func():
     version = 1.0
@@ -21,12 +22,17 @@ class func():
         self.name = nm + " hello "
         print("init %s version = %0.2f " % (self.name , self.version))
 
-
+a = ('abc' , 'def' , 'ghi')
+a = '.'.join(a)
+print(a)
+print("%#x" % 124)
+print(r"\n")
+print(id(a))
+"""
 print(hex(10))
 print("hello world")
 print(randint(1 , 20))
 
-"""
 print(ord("a"))
 print(chr(ord('a')))
 for i  in range(1 , 5):
