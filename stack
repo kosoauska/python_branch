@@ -1,0 +1,39 @@
+stack  = []
+def pushit():
+    stack.append(input("enter new string :"))
+
+def popit():
+    if len(stack) == 0:
+        print("can not delete stack")
+    else:
+        print("remove %s" % stack.pop())
+
+def viewstack():
+    print(stack)
+
+cmds = {'u': pushit , 'o':popit , 'v': viewstack}
+
+def showmenu():
+    pr = """
+    p(U)sh
+    p(O)p
+    (V)iew
+    (Q)uit
+    Enter choice: """
+    while True:
+        while True:
+            try:
+                choice = input(pr).strip()[0].lower()
+            except (EOFError , KeyboardInterrupt , IndexError):
+                choice = 'q'
+            print("you picked : [%s] " % choice)
+            if choice not in "uovq":
+                print("input error try again ")
+            else:
+                break
+        if choice == 'q':
+            break
+        cmds[choice]()
+if __name__ == '__main__':
+    showmenu()
+
