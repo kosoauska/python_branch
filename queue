@@ -17,7 +17,7 @@ def showmenu():
     pr = """
     (E)nqueue
     (D)equeue
-    (V)iew 
+    (V)iew
     (Q)uit
     Enter choice: """
     while True:
