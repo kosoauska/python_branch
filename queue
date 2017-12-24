@@ -1,0 +1,39 @@
+queue  = []
+def enQ():
+    queue.append(input("enter new string :"))
+
+def deQ():
+    if len(queue) == 0:
+        print("can not delete queue")
+    else:
+        print("remove %s" % queue.pop(0))
+
+def viewQ():
+    print(queue)
+
+cmds = {'e': enQ , 'd':deQ , 'v': viewQ}
+
+def showmenu():
+    pr = """
+    (E)nqueue
+    (D)equeue
+    (V)iew
+    (Q)uit
+    Enter choice: """
+    while True:
+        while True:
+            try:
+                choice = input(pr).strip()[0].lower()
+            except (EOFError , KeyboardInterrupt , IndexError):
+                choice = 'q'
+            print("you picked : [%s] " % choice)
+            if choice not in "eqvd":
+                print("input error try again ")
+            else:
+                break
+        if choice == 'q':
+            break
+        cmds[choice]()
+if __name__ == '__main__':
+    showmenu()
+
